@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trending Products</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      color: #333;
+      background-color: #f9f9f9;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #1a73e8;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #fff;
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ffcc00;
+    }
+
+    .trending-section {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: linear-gradient(145deg, #e3f2fd, #bbdefb);
+    }
+
+    .trending-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      color: #1a73e8;
+    }
+
+    .product-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    .product {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      max-width: 300px;
+      transition: transform 0.3s ease;
+    }
+
+    .product:hover {
+      transform: translateY(-10px);
+    }
+
+    .product img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 1rem;
+      text-align: left;
+    }
+
+    .product-info h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .product-info p {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      color: #555;
+    }
+
+    .product-info button {
+      background-color: #1a73e8;
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .product-info button:hover {
+      background-color: #1558b6;
+    }
+
+    .offer {
+      background-color: #ffcc00;
+      padding: 0.5rem;
+      text-align: center;
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: #1a73e8;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 2rem;
+    }
+
+    footer p {
+      margin-bottom: 0.5rem;
+    }
+
+    .social-media {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .social-icon img {
+      height: 30px;
+      width: 30px;
+      transition: transform 0.3s ease;
+    }
+
+    .social-icon img:hover {
+      transform: scale(1.2);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .product-list {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <div class="logo">
+      <img src="logo.jpg" alt="Website Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="trending.html">Trending</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Trending Products Section -->
+  <section class="trending-section">
+    <h2>Trending Products</h2>
+    <div class="product-list">
+      <!-- Product 1 -->
+      <div class="product">
+        <img src="plump hoodie.webp" alt="Plump Hoodie">
+        <div class="product-info">
+          <h3>Plump Hoodie</h3>
+          <p>₹20.00</p>
+          <button onclick="addToCart('Plump Hoodie', 20)">Add to Cart</button>
+        </div>
+        <div class="offer">
+          <p>Special Offer: Buy 1 Get 1 Free</p>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product">
+        <img src="rabari suit.webp" alt="Rabari Suit">
+        <div class="product-info">
+          <h3>Rabari Suit</h3>
+          <p>₹30.00</p>
+          <button onclick="addToCart('Rabari Suit', 30)">Add to Cart</button>
+        </div>
+        <div class="offer">
+          <p>Special Offer: 20% Off on your first purchase!</p>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product">
+        <img src="sky hoodie.webp" alt="Sky Hoodie">
+        <div class="product-info">
+          <h3>Sky Hoodie</h3>
+          <p>₹50.00</p>
+          <button onclick="addToCart('Sky Hoodie', 50)">Add to Cart</button>
+        </div>
+        <div class="offer">
+          <p>Special Offer: Free Shipping</p>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product">
+        <img src="plump hoodie.webp" alt="New Product">
+        <div class="product-info">
+          <h3>Plump Hoodie</h3>
+          <p>₹40.00</p>
+          <button onclick="addToCart('Hlump Hoodie', 40)">Add to Cart</button>
+        </div>
+        <div class="offer">
+          <p>Limited Offer: 10% Off</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 Nilex. All rights reserved.</p>
+    <div class="social-media">
+      <a href="#" class="social-icon"><img src="facebook.png" alt="Facebook"></a>
+      <a href="#" class="social-icon"><img src="twiter.png" alt="Twitter"></a>
+      <a href="#" class="social-icon"><img src="instagram.png" alt="Instagram"></a>
+    </div>
+  </footer>
+
+  <script>
+    const cart = [];
+
+    function addToCart(productName, price) {
+      const product = cart.find(item => item.name === productName);
+      if (product) {
+        product.quantity += 1;
+      } else {
+        cart.push({ name: productName, price: price, quantity: 1 });
+      }
+      alert(`₹{productName} added to cart.`);
+      console.log(cart);
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
