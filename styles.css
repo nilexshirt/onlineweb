@@ -23,6 +23,14 @@ header {
 header .logo img {
   height: 50px;
 }
+li:hover{
+  transition: 0.8s;
+  scale: 0.9;
+}
+.logo img:hover{
+  transition: 1.3s;
+  scale: 1.5;
+}
 
 nav ul {
   display: flex;
@@ -51,7 +59,9 @@ nav ul li a:hover {
 
 }
 .video-section:hover {
-  transform: translateY(-10px);
+  /* transform: translateY(-10px); */
+  transition: 1.2s;
+  scale: 1.1;
 }
 
 .video-section .video-container {
@@ -106,20 +116,22 @@ nav ul li a:hover {
   color: rgb(80, 134, 116);
 }
 .product button:hover {
-  background-color: #1558b6;
+  background-color: #da1b1b;
 }
 .product:hover {
-  transform: translateY(-10px);
+  /* transform: translateY(-10px); */
+  transition: 0.9s;
+  scale: 0.98;
 }
 .product button {
   display: flex;
-      align-items: center;
-      
-      background: rgb(149, 190, 36);
-      color: #d12121;
+      /* align-items: center; */
+      text-align: center;
+      background: rgb(74, 95, 192);
+      color: #f18463;
       border: 1px solid #295477;
       box-shadow: 0 3px 6px rgba(187, 33, 33, 0.1);
-      font-size: 1.5rem;
+      font-size: 1rem;
       transition: box-shadow 0.3s;
 }
 .social-icon img:hover {
@@ -150,7 +162,9 @@ footer p {
 }
 
 .social-icon img:hover {
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
+  transition: 0.5s;
+  scale: 0.9;
 }
 
 /* Responsive Design */
