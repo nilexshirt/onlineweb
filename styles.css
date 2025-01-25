@@ -124,13 +124,13 @@ nav ul li a:hover {
   scale: 0.98;
 }
 .product button {
-  display: flex;
-      /* align-items: center; */
+  /* display: flex; */
+      align-items: center;
       text-align: center;
       background: rgb(74, 95, 192);
       color: #f18463;
       border: 1px solid #295477;
-      box-shadow: 0 3px 6px rgba(187, 33, 33, 0.1);
+      box-shadow: 0 3px 4px rgba(187, 33, 33, 0.1);
       font-size: 1rem;
       transition: box-shadow 0.3s;
 }
